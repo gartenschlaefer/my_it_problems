@@ -1,0 +1,6 @@
+# --
+# pacman problems
+
+# integrity problems (old keys etc.):
+sudo pacman-key --populate
+sudo pacman -Syu

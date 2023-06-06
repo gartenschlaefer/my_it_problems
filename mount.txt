@@ -1,0 +1,22 @@
+# --
+# mount any harddrive
+# naming must be location etc. world-dekutree.mount
+# useful commands:
+#   sudo systemctl daemon-reload
+#   systemctl show -p ActiveState -p SubState --value world-dekutree.mount
+#   sudo systemctl start world-dekutree.mount
+#   sudo systemctl enable world-dekutree.mount
+#   lsblk -no FSTYPE /dev/disk/by-label/dekutree
+
+[Unit]
+Description=mount dekutree
+
+[Mount]
+What=/dev/disk/by-label/dekutree
+Where=/world/dekutree
+Type=ntfs
+#Options=
+#TimeoutSec=seconds
+
+[Install]
+WantedBy=multi-user.target
