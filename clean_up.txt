@@ -1,0 +1,17 @@
+# --
+# cleanup manjaro system
+
+# remove cached packages
+sudo pacman -Scc
+
+# remove unused packages
+sudo pacman -Rns $(pacman -Qtdq)
+
+# clean home cache
+rm -rf ~/.cache/*
+
+# large file finder
+sudo pacman -S ncdu
+
+# limit log files
+sudo journalctl --vacuum-size=100M

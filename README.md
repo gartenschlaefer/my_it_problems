@@ -1,2 +1,2 @@
 # my_it_problems
-My Informatik Problems
+My personal informatic problems (mostly on the manjaro-linux system)
