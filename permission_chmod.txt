@@ -1,0 +1,5 @@
+# --
+# persmission rights
+
+# change hard drive permissions to read / write access
+chmod 777 /media/<device>
