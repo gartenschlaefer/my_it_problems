@@ -1,5 +1,7 @@
 # --
 # mount any harddrive
+#
+# save this file in /etc/systemd/system
 # naming must be location etc. world-dekutree.mount
 # useful commands:
 #   sudo systemctl daemon-reload
