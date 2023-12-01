@@ -12,3 +12,6 @@ sudo nmtui
 
 # wpa supplicant file
 /etc/wpa_supplicant/wpa_supplicant.conf
+
+# connect via ssh
+ssh <username>@raspberrypi.local
