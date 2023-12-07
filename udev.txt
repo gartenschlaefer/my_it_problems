@@ -8,8 +8,11 @@
 # write new file in /etc/udev/rules.d/
 # e.g. /etc/udev/rules.d/10-custom-usb.rules
 
-# rule for esp32 (devkit-c)
-KERNEL=="ttyUSB0", ATTRS{idVendor}=="0x10c4", ATTRS{idProduct}=="0xea60", GROUP="uucp", MODE="0666"
+# --
+# custom designed rules for usb devices
 
-# rule for rpi pico
-KERNEL=="ttyACM0", ATTRS{idVendor}=="0x2e8a", ATTRS{idProduct}=="0x0005", GROUP="uucp", MODE="0666"
+# rule for esp32 (devkit-c)
+KERNEL=="ttyUSB0", ATTRS{idVendor}=="10c4", ATTRS{idProduct}=="ea60", GROUP="uucp", MODE="0666"
+
+# rule for raspberry pi pico
+KERNEL=="ttyACM0", ATTRS{idVendor}=="2e8a", ATTRS{idProduct}=="0005", GROUP="uucp", MODE="0666"
