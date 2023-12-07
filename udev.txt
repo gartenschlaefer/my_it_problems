@@ -1,9 +1,15 @@
 # --
 # add custom rules to /etc/udev/rules.d/
 # get ispiration from: /lib/udev/rules.d/50-udev-default.rules
+# determine usb infos with
+# lsusb -v
+# udevadm info /dev/tty*
 
 # write new file in /etc/udev/rules.d/
 # e.g. /etc/udev/rules.d/10-custom-usb.rules
 
-KERNEL=="ttyACM0", MODE="0666"
-KERNEL=="ttyUSB0", MODE="0666"
+# rule for esp32 (devkit-c)
+KERNEL=="ttyUSB0", ATTRS{idVendor}=="0x10c4", ATTRS{idProduct}=="0xea60", GROUP="uucp", MODE="0666"
+
+# rule for rpi pico
+KERNEL=="ttyACM0", ATTRS{idVendor}=="0x2e8a", ATTRS{idProduct}=="0x0005", GROUP="uucp", MODE="0666"
