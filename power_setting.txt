@@ -3,3 +3,8 @@
 
 IgnoreLid=true
 in /etc/UPower/UPower.conf
+
+or
+
+HandleLidSwitch=ignore
+in  /etc/systemd/logind.conf
