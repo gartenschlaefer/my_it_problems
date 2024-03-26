@@ -1,0 +1,5 @@
+# --
+# power lid setting
+
+IgnoreLid=true
+in /etc/UPower/UPower.conf
